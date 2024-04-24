@@ -24,7 +24,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/ricardo-ch/go-kafka-connect/v3/lib/connectors"
+	"github.com/palkx/go-kafka-connect/v3/lib/connectors"
 	"github.com/spf13/cobra"
 )
 
@@ -35,14 +35,14 @@ var createCmd = &cobra.Command{
 	RunE:  RunECreate,
 }
 
-//RunECreate ...
+// RunECreate ...
 func RunECreate(cmd *cobra.Command, args []string) error {
 	configs, err := getCreateCmdConfig(cmd)
 	if err != nil {
 		return err
 	}
 
-	//TODO was not expecting I would have to update CreateConnector when adding multiple file deployment feature
+	// TODO was not expecting I would have to update CreateConnector when adding multiple file deployment feature
 	// will have to add properly later
 	for _, config := range configs {
 		resp, err := getClient().CreateConnector(config, sync)

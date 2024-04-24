@@ -17,7 +17,7 @@ package cmd
 import (
 	"errors"
 
-	"github.com/ricardo-ch/go-kafka-connect/v3/lib/connectors"
+	"github.com/palkx/go-kafka-connect/v3/lib/connectors"
 	"github.com/spf13/cobra"
 )
 
@@ -46,7 +46,6 @@ func handleCmd(cmd *cobra.Command, args []string) error {
 	default:
 		return getConnector()
 	}
-
 }
 
 func validateArgs() error {
@@ -61,7 +60,6 @@ func validateArgs() error {
 }
 
 func getConnector() error {
-
 	client := getClient()
 	req := connectors.ConnectorRequest{
 		Name: connector,
@@ -76,7 +74,6 @@ func getConnector() error {
 }
 
 func getConfig() error {
-
 	client := getClient()
 	req := connectors.ConnectorRequest{
 		Name: connector,
@@ -91,7 +88,6 @@ func getConfig() error {
 }
 
 func getStatus() error {
-
 	client := getClient()
 	req := connectors.ConnectorRequest{
 		Name: connector,
@@ -106,7 +102,6 @@ func getStatus() error {
 }
 
 func getTasks() error {
-
 	client := getClient()
 	req := connectors.ConnectorRequest{
 		Name: connector,

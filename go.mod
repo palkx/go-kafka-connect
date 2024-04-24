@@ -1,4 +1,4 @@
-module github.com/ricardo-ch/go-kafka-connect/v3
+module github.com/palkx/go-kafka-connect/v3
 
 go 1.17
 

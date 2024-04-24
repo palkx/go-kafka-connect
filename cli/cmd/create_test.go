@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ricardo-ch/go-kafka-connect/v3/lib/connectors"
+	"github.com/palkx/go-kafka-connect/v3/lib/connectors"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -105,7 +105,6 @@ func Test_getConfigFromFile_OK(t *testing.T) {
 
 	assert.Nil(t, err)
 	assert.Equal(t, expected, actual)
-
 }
 
 func Test_getConfigFromFile_Invalid_JSON(t *testing.T) {

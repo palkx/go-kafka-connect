@@ -20,7 +20,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ricardo-ch/go-kafka-connect/v3/lib/connectors"
+	"github.com/palkx/go-kafka-connect/v3/lib/connectors"
 	"github.com/spf13/cobra"
 )
 
@@ -39,7 +39,7 @@ var updateCmd = &cobra.Command{
 	RunE:  RunEUpdate,
 }
 
-//RunEUpdate ...
+// RunEUpdate ...
 func RunEUpdate(cmd *cobra.Command, args []string) error {
 	req := connectors.CreateConnectorRequest{}
 
